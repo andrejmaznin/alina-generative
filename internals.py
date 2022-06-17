@@ -34,4 +34,6 @@ def generate_image(
         else:
             img.paste(form, (0, 0), form)
 
+        form.close()
+
     img.save('output.png')
