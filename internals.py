@@ -2,7 +2,6 @@ from random import randint, choice
 from typing import Tuple
 
 from PIL import Image
-from PIL.Image import Transpose
 
 
 def generate_image(
@@ -11,10 +10,10 @@ def generate_image(
 ) -> Image:
     img = Image.new('RGB', size=size, color=background_rgb)
     methods = [
-        Transpose.FLIP_LEFT_RIGHT,
-        Transpose.FLIP_TOP_BOTTOM,
-        Transpose.ROTATE_180,
-        Transpose.TRANSPOSE
+        Image.Transpose.FLIP_LEFT_RIGHT,
+        Image.Transpose.FLIP_TOP_BOTTOM,
+        Image.Transpose.ROTATE_180,
+        Image.Transpose.TRANSPOSE
     ]
 
     for _ in range(5):
