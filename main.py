@@ -12,4 +12,6 @@ async def image_endpoint():
         size=(3500, 2500),
         background_rgb=(227, 227, 227)
     )
-    return FileResponse('output.png', status_code=200)
+    response = FileResponse('output.png', media_type='image/png')
+    response.status_code = 200
+    return response
